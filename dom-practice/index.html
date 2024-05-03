@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./index.js">
+    </script>
+</head>
+
+<body>
+    <div id="block1" onclick="javascript:onBlockClick(event)" style="background-color: blue;">
+        Block1
+    </div>
+    <div id="block2">
+        Block2
+    </div>
+    <div id="block3">
+        Block3
+    </div>
+    <input type="text" name="search" id="search" />
+    <script src="./index.js"></script>
+    <script>
+        function onBlockClick(e) {
+            alert("버튼 클릭1");
+            console.log(e);
+        }
+        function onChangeInput(e) {
+            console.log(e);
+            console.log(e.target.value);
+        }
+        const searchInput = document.getElementById('search');
+        searchInput.addEventListner('change', onChangeInput);
+    </script>
+</body>
+
+</html>
